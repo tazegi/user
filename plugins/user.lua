@@ -9,4 +9,19 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  {
+    "phaazon/hop.nvim",
+    event = "BufRead",
+    config = function()
+      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    end,
+  },
+  {
+    "kylechui/nvim-surround",
+    event = "BufRead",
+    config = function()
+      require'nvim-surround'.setup { 
+      }
+    end,
+  },
 }

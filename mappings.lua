@@ -6,9 +6,11 @@
 return {
   -- first key is the mode
   n = {
+    ["s"] = {":HopChar2<cr>"},
+    ["S"] = {":HopWord<cr>"},
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
-    ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+    -- ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
         require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
@@ -24,5 +26,12 @@ return {
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+  },
+  i = {
+    -- setting a mapping to false will disable it
+    ["<C-f>"] = {"<Right>"},
+    ["<C-b>"] = {"<Left>"},
+    ["<C-a>"] = {"<Home>"},
+    ["<C-e>"] = {"<End>"},
   },
 }
